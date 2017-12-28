@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import calculate from '../logic/calculate';
+import ButtonPanel from './ButtonPanel';
 
 class App extends React.Component {
   constructor(props) {
@@ -18,7 +19,9 @@ class App extends React.Component {
   render(){
     return (
       <div className="component-app">
-        
+        <ButtonPanel
+          clickHandler={this.handleClick}
+        />
       </div>
     );
   }
