@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
-import calculate from '../logic/calculate';
 import ButtonPanel from './ButtonPanel';
+import calculate from '../logic/calculate';
+import Display from './Display'; 
 
 class App extends React.Component {
   constructor(props) {
@@ -19,6 +20,9 @@ class App extends React.Component {
   render(){
     return (
       <div className="component-app">
+        <Display
+          value={this.state.next || this.state.total || '0'}
+        />
         <ButtonPanel
           clickHandler={this.handleClick}
         />
